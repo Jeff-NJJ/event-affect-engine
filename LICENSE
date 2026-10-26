@@ -19,20 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-NOTE ON THIS LICENSE'S SCOPE
-
-This license covers the original code of this repository. It does NOT cover
-third-party files that are redistributed here under their own terms. See
-NOTICE.md for the exact paths and licenses:
-
-  - operit/daily_life.guarded.js, operit/daily_life-v1.12.2-guard.patch
-    -> LGPL-3.0-only (Operit), license text in operit/LICENSE.upstream
-  - ob_extension/staged_ob/server.py
-    -> MIT (Ombre Brain), license text in
-       ob_extension/staged_ob/LICENSE.OMBRE-BRAIN
-
-If you relicense or redistribute this repository, those components must keep
-their own notices.

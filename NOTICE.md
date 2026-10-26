@@ -1,7 +1,10 @@
 # Third-Party Components and License Map
 
-Everything in this repository is open source, but not under one single license.
-This file is authoritative for which path is under what terms.
+The file named `LICENSE` is the standard MIT text, deliberately left unannotated
+so GitHub and REUSE tooling classify the repository correctly. **That MIT license
+covers the original code of this repository only.** It does not relicense
+third-party files redistributed here under their own terms. This file is
+authoritative for which path is under what terms.
 
 ## 1. Original code — MIT
 

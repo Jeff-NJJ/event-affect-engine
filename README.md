@@ -316,10 +316,12 @@ This repository is the **v5.7 sanitized share edition**, built from the archive
   `mobile/`; the archive's release record kept verbatim under
   `docs/release-record/` (its digests intentionally still refer to the original
   archive layout — `tools/verify_manifest.py` covers the published tree).
-- Added: `LICENSE`, `NOTICE.md`, this `README.md`, `CONTRIBUTING.md`,
+- Added: `LICENSE` (pure MIT text so license tooling detects it), `NOTICE.md`
+  with the license-scope statement, this `README.md`, `CONTRIBUTING.md`,
   `SECURITY.md`, `.github/workflows/checks.yml`, `tools/verify_manifest.py`,
-  `ob_extension/staged_ob/LICENSE.OMBRE-BRAIN`, expanded `.gitignore`, and the
-  license-scope note appended to `LICENSE`.
+  `ob_extension/staged_ob/LICENSE.OMBRE-BRAIN`, and an expanded `.gitignore`
+  plus a `.gitattributes` that keeps the tree LF (without it a Windows clone with
+  `core.autocrlf=true` checks out CRLF and `MANIFEST.sha256` no longer matches).
 
 The share edition removed real hosts, credentials, personal identifiers, private
 workflow templates and raw operations records. That claim was **re-verified
