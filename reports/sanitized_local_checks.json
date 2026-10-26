@@ -1,0 +1,96 @@
+{
+  "generated_at_utc": "2026-10-20T04:43:09+00:00",
+  "python": "3.12.9",
+  "sqlite": "3.45.3",
+  "node": "v24.21.0",
+  "platform": "Windows",
+  "checks": [
+    {
+      "name": "python_syntax",
+      "status": "passed",
+      "file_count": 93
+    },
+    {
+      "name": "python_regression",
+      "status": "passed",
+      "duration_seconds": 74.078,
+      "exit_code": 0,
+      "test_count": 274,
+      "skipped_count": 0,
+      "executed_count": 274
+    },
+    {
+      "name": "javascript_syntax:endocrine_bridge.js",
+      "status": "passed",
+      "duration_seconds": 0.047,
+      "exit_code": 0
+    },
+    {
+      "name": "javascript_syntax:endocrine_api.js",
+      "status": "passed",
+      "duration_seconds": 0.032,
+      "exit_code": 0
+    },
+    {
+      "name": "javascript_syntax:daily_life.guarded.js",
+      "status": "passed",
+      "duration_seconds": 0.031,
+      "exit_code": 0
+    },
+    {
+      "name": "bridge_contract",
+      "status": "passed",
+      "duration_seconds": 0.062,
+      "exit_code": 0
+    },
+    {
+      "name": "generated_python_syntax",
+      "status": "passed"
+    },
+    {
+      "name": "daily_life_creation_graph",
+      "status": "passed",
+      "duration_seconds": 1.907,
+      "exit_code": 0
+    },
+    {
+      "name": "expression_hook_syntax",
+      "status": "passed",
+      "duration_seconds": 0.031,
+      "exit_code": 0
+    },
+    {
+      "name": "expression_hook_contract",
+      "status": "passed",
+      "duration_seconds": 0.062,
+      "exit_code": 0
+    },
+    {
+      "name": "grounding_bridge_contract",
+      "status": "passed",
+      "duration_seconds": 0.032,
+      "exit_code": 0
+    },
+    {
+      "name": "native_schedule_syntax",
+      "status": "passed",
+      "duration_seconds": 0.031,
+      "exit_code": 0
+    },
+    {
+      "name": "native_client_contract",
+      "status": "passed",
+      "duration_seconds": 0.031,
+      "exit_code": 0
+    }
+  ],
+  "all_checks_passed": true,
+  "scope": "v5.7 offline regression: native message receipts and clocks, cloud-vector segmentation/cache/deadlines, actual preparedHistory prompt contract, workflow graph/idempotency and Shanghai calendar boundaries. SDK transport and real cloud/Android runtime evidence are separate reports.",
+  "not_verified": [
+    "statistical semantic accuracy or human psychological validity",
+    "production transport or installed APK runtime within this offline suite",
+    "external social message delivery",
+    "v4-to-v3 inverse migration"
+  ],
+  "test_process_budget_seconds": 1200
+}

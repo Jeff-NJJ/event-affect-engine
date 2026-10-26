@@ -1,0 +1,5 @@
+# Optional bridge environment only. Core endocrine service stays standard-library.
+# v1.26.0 supports Python >=3.10; current SDK main requires >=3.11.
+mcp==1.26.0
+# Avoid the observed Settings forward-reference warning with 2.16.0.
+pydantic-settings==2.12.0

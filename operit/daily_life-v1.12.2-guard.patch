@@ -1,0 +1,31 @@
+--- a/app/src/main/assets/packages/daily_life.js
++++ b/app/src/main/assets/packages/daily_life.js
+@@ -623,6 +623,28 @@
+                 condition: "on_success"
+             }
+         ];
++        // v4: claim before waking AI; repeated Worker attempts must not enqueue a new turn.
++        // A claimed-but-interrupted delivery is deliberately not retried without reconciliation.
++        const guardExecId = `guard_exec_${uniqueId}`;
++        const guardExtractId = `guard_extract_${uniqueId}`;
++        const guardConditionId = `guard_condition_${uniqueId}`;
++        if (!/^[a-zA-Z0-9_-]+$/.test(workflowId)) throw new Error("Invalid workflow id");
++        const guardSlot = String(params.trigger_time).replace(/[^0-9a-zA-Z_-]/g, "-");
++        const guardCommand = `( base=/sdcard/Download/Operit/.delivery_guard_v4; umask 077; if ! mkdir -p "$base"; then printf 'WF_%s_%s' GUARD SKIP; elif mkdir "$base/${workflowId}_${guardSlot}" 2>/dev/null; then printf 'WF_%s_%s' GUARD GO; else printf 'WF_%s_%s' GUARD SKIP; fi )`;
++        nodes.push(
++            {id:guardExecId,type:"execute",name:"防重·原子领取",position:{x:80,y:180},actionType:"super_admin:terminal",actionConfig:{command:guardCommand,timeoutMs:"15000"}},
++            {id:guardExtractId,type:"extract",name:"提取防重结果",position:{x:260,y:180},source:{nodeId:guardExecId},expression:"WF_GUARD_(GO|SKIP)",group:1,defaultValue:"SKIP"},
++            {id:guardConditionId,type:"condition",name:"仅领取成功放行",position:{x:440,y:180},left:{nodeId:guardExtractId},operator:"EQ",right:"GO"}
++        );
++        const triggerLink = connections.find(c => c.sourceNodeId === triggerNodeId && c.targetNodeId === startNodeId);
++        if (!triggerLink) throw new Error("Missing trigger connection");
++        triggerLink.sourceNodeId = guardConditionId;
++        triggerLink.condition = "true";
++        connections.push(
++            {sourceNodeId:triggerNodeId,targetNodeId:guardExecId,condition:"on_success"},
++            {sourceNodeId:guardExecId,targetNodeId:guardExtractId,condition:"on_success"},
++            {sourceNodeId:guardExtractId,targetNodeId:guardConditionId,condition:"on_success"}
++        );
+         await Tools.Workflow.update(workflowId, {
+             name: workflowName,
+             description,

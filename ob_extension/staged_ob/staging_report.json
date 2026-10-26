@@ -1,0 +1,8 @@
+{
+  "source_sha256": "6e304b853a8f4f1046fd88270ac1cb377576025c7eb1c22c64adcb9f86fd6189",
+  "candidate_sha256": "72b0482074a00391d4b38fe59707cc57ba1f4fd5d705fca211a1c69acd89f691",
+  "production_modified": false,
+  "server_executed": false,
+  "enablement": "OB_AFFECT_CONFIG required; disabled without private config",
+  "extension_sha256": "5a9829273a25005c0ba93e76544b50a4fac243d4c42fc6eae6fc4c911ea3a75c"
+}

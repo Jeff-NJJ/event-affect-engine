@@ -1,0 +1,7 @@
+{
+  "api_base": "https://YOUR-ENDOCRINE-HOST",
+  "token": "SET-PRIVATELY",
+  "expression_routes": [
+    {"chat_id": "EXACT-OPERIT-CHAT-ID", "card_id": "EXACT-CHARACTER-CARD-ID", "agent_id": "example_agent", "actor_id": "example_user"}
+  ]
+}

@@ -1,0 +1,20 @@
+[Unit]
+Description=Event Affect Engine v5.4 candidate (review paths before installation)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/affect/event_affect_v5_4
+EnvironmentFile=/etc/affect/service-v5_4.env
+ExecStart=/usr/bin/python3 -m endocrine --db /srv/affect/event_affect_v5_4/data/affect.sqlite3 --host 127.0.0.1 --port 5021
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=full
+ReadWritePaths=/srv/affect/event_affect_v5_4/data
+
+[Install]
+WantedBy=multi-user.target

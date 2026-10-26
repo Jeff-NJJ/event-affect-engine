@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "event-affect-engine"
+version = "5.7.0"
+description = "Event-driven affect simulation with transactional deduplication and replay"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["affective-computing", "agent", "mcp", "persona", "simulation", "memory"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# No runtime dependencies: the engine is standard-library only.
+# The MCP bridge needs deploy/requirements-ob.txt.
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/Jeff-NJJ/event-affect-engine/tree/main/docs"
+Source = "https://github.com/Jeff-NJJ/event-affect-engine"
+Issues = "https://github.com/Jeff-NJJ/event-affect-engine/issues"
+
+[tool.setuptools.packages.find]
+include = ["endocrine*"]

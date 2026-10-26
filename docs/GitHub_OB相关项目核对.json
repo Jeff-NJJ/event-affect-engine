@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-18",
+  "source_code_reviewed": true,
+  "performance_benchmark_performed": false,
+  "sources": [
+    {
+      "repo": "getzep/graphiti",
+      "license": "Apache-2.0",
+      "files": [
+        "graphiti_core/edges.py",
+        "graphiti_core/utils/maintenance/temporal_edge_utils.py",
+        "mcp_server/src/graphiti_mcp_server.py"
+      ],
+      "decision": "借鉴双时间与来源/分区，未复制代码；其关键词时间启发式未采用。",
+      "commit": "417c3a125ae3ac53c19b8e53fffaccf3e665a88e",
+      "url": "https://github.com/getzep/graphiti"
+    },
+    {
+      "repo": "mem0ai/mem0",
+      "license": "Apache-2.0",
+      "files": [
+        "mem0/memory/main.py"
+      ],
+      "decision": "借鉴身份作用域与元数据隔离，未采用自动抽取/合并写入作为事实凭证。",
+      "commit": "0724291bd864cf807e88ee8981c8226644e8fb42",
+      "url": "https://github.com/mem0ai/mem0"
+    },
+    {
+      "repo": "modelcontextprotocol/python-sdk",
+      "license": "MIT",
+      "files": [
+        "pyproject.toml",
+        "src/mcp/client/streamable_http.py"
+      ],
+      "decision": "main需Python>=3.11；运行适配采用支持Python>=3.10的v1.26.0官方SDK。",
+      "runtime_commit": "3d9d34552a9ab8988acf8d06e4a705bd799fc32b",
+      "commit": "2af9e3089ac66b35c1550c500aae86a82efb1e17",
+      "url": "https://github.com/modelcontextprotocol/python-sdk"
+    },
+    {
+      "repo": "GAIPS/FAtiMA-Toolkit",
+      "license": "Apache-2.0",
+      "files": [
+        "Assets/EmotionalAppraisal/Mood.cs",
+        "Assets/EmotionalAppraisal/ConcreteEmotionalState.cs",
+        "Assets/EmotionalAppraisal/OCCModel/OCCAffectDerivationComponent.cs"
+      ],
+      "decision": "借鉴情绪与心境反馈的模块化设计；不是激素模型替代品，未移植C#或宣称心理验证。",
+      "commit": "56b7cbd992f953cfe21a7b12cb1a0e6cdf6ccf9f",
+      "url": "https://github.com/GAIPS/FAtiMA-Toolkit"
+    }
+  ]
+}

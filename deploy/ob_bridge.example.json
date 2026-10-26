@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "archive_enabled": false,
+  "backend": "ob_structured_v1",
+  "archive_signing_key_file": "/ABS/PRIVATE/affect_archive.key",
+  "endpoint": "http://127.0.0.1:18001/mcp",
+  "headers": {},
+  "routes": [],
+  "bindings": {},
+  "affect_feed": {"base":"http://127.0.0.1:5021","token":"SET_LOCALLY"}
+}

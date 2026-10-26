@@ -1,0 +1,29 @@
+# runtime state and secrets never belong in git
+__pycache__/
+*.py[cod]
+data/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.env
+.env
+client.json
+test-results.local.json
+
+# local verification output (commit an explicit copy only when you mean to)
+reports/verification.json
+reports/verification_local.json
+reports/expression_cloud*.json
+reports/social_cloud*.json
+
+# private profiles / keys referenced by deploy/*.example
+expression_profiles.json
+ob_bridge.json
+*.key
+
+# editors and OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

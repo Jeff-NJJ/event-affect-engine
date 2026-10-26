@@ -1,0 +1,53 @@
+name: offline checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  regression:
+    name: ${{ matrix.os }} / py${{ matrix.python }} / node${{ matrix.node }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: "3.10"
+            node: "22"
+          - os: ubuntu-latest
+            python: "3.12"
+            node: "22"
+          - os: windows-latest
+            python: "3.12"
+            node: "22"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      # The engine is stdlib-only, but zoneinfo needs IANA data on some images.
+      - name: Provide IANA timezone data
+        run: python -m pip install --disable-pip-version-check --quiet tzdata
+
+      - name: Offline regression suite
+        run: python -B tools/run_checks.py --timeout-seconds 600 --report reports/verification.json
+
+      - name: Verify published digests
+        run: python -B tools/verify_manifest.py --root .
+
+      - name: Upload verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-${{ matrix.os }}-py${{ matrix.python }}
+          path: reports/verification.json

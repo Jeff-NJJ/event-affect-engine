@@ -1,0 +1,23 @@
+# The published tree is LF, and MANIFEST.sha256 hashes the bytes in this
+# repository. Without this file a Windows clone with core.autocrlf=true checks
+# out CRLF and tools/verify_manifest.py then reports every file as mismatched.
+* text=auto eol=lf
+
+*.py text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.service text eol=lf
+*.patch text eol=lf
+*.example text eol=lf
+*.txt text eol=lf
+
+# binary payloads: never normalize
+*.toolpkg binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.gz binary
+*.zip binary

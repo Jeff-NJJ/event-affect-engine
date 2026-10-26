@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-10-18",
+  "projects": [
+    {
+      "repo": "Mai-with-u/MaiBot",
+      "commit": "ac6ed61b7b9c971ad94921de3b16fa6f63c36a20",
+      "license": "GPL-3.0",
+      "files": [
+        "prompts/zh-CN/learn_style.prompt",
+        "prompts/zh-CN/maisaka_replyer.prompt",
+        "src/learners/expression_style_utils.py",
+        "src/chat/replyer/maisaka_expression_selector.py"
+      ],
+      "reuse": "architectural_reference_only_no_source_code_copied"
+    },
+    {
+      "repo": "SillyTavern/SillyTavern",
+      "commit": "06bde939fb1e9c4c8d8641d810f0a916b5bce127",
+      "license": "AGPL-3.0",
+      "files": [],
+      "reuse": "architectural_reference_only_no_source_code_copied"
+    },
+    {
+      "repo": "moeru-ai/airi",
+      "commit": "266e8d9467197f9562279d6291eddae758b11fe2",
+      "license": "MIT",
+      "files": [
+        "packages/stage-ui/src/composables/use-airi-runtime-prompt.ts"
+      ],
+      "reuse": "architectural_reference_only_no_source_code_copied"
+    },
+    {
+      "repo": "Open-LLM-VTuber/Open-LLM-VTuber",
+      "commit": "992309c0aa19845960228f880013d4685fde93b5",
+      "license": "MIT",
+      "files": [
+        "prompts/utils/concise_style_prompt.txt",
+        "prompts/utils/speakable_prompt.txt"
+      ],
+      "reuse": "architectural_reference_only_no_source_code_copied"
+    },
+    {
+      "repo": "caty-ai/persona-engine",
+      "commit": "da423d77b83c2780662d107b84380694dfa1c1e9",
+      "license": "MIT",
+      "files": [
+        "packages/core/src/compile/budget.ts"
+      ],
+      "reuse": "architectural_reference_only_no_source_code_copied"
+    },
+    {
+      "repo": "pioneerjeff-labs/emotion-engine",
+      "commit": "e7fab5c3984a4885ac74c972d573b05b45a8c496",
+      "license": "MIT",
+      "files": [
+        "scripts/prompt_preview.py"
+      ],
+      "reuse": "architectural_reference_only_no_source_code_copied"
+    }
+  ],
+  "selection": "Original Python expression adapter and Operit hook; no new upstream runtime dependency or model download; no claim of benchmark superiority."
+}

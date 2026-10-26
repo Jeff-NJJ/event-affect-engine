@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "archive_enabled": false,
+  "archive_db": "/ABS/OB_PRIVATE/affect_conclusions.sqlite3",
+  "archive_signing_key_file": "/ABS/PRIVATE/affect_archive.key",
+  "archive_agents": [],
+  "scopes": {}
+}

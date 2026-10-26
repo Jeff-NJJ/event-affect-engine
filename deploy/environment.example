@@ -1,0 +1,35 @@
+# Set locally; never paste real values into reports or source control.
+ENDOCRINE_TOKEN=SET_LOCALLY
+ENDOCRINE_ADMIN_TOKEN=SET_A_DIFFERENT_SECRET_LOCALLY
+CLASSIFIER_ENDPOINT=https://ark.cn-beijing.volces.com/api/plan/v3/chat/completions
+CLASSIFIER_MODEL=glm-5.3-flash
+CLASSIFIER_KEY=SET_LOCALLY
+CLASSIFIER_TIMEOUT_SECONDS=60
+# Optional provider-specific setting; current deployment preserves provider defaults.
+# CLASSIFIER_REQUEST_OPTIONS_JSON={"thinking":{"type":"disabled"}}
+
+# Semantic retrieval inherits the same cloud URL/model/key by default.
+# OB uses its existing cloud embeddings; no local model or keyword prefilter.
+# SEMANTIC_ENDPOINT=https://YOUR-OTHER-PROVIDER/chat/completions
+# SEMANTIC_MODEL=YOUR_MODEL
+# SEMANTIC_KEY=SET_LOCALLY
+
+# Optional gateway implementing docs/delivery_protocol.md; omit until integrated.
+# DELIVERY_GATEWAY_URL=https://YOUR-IDEMPOTENT-GATEWAY
+# DELIVERY_GATEWAY_TOKEN=SET_LOCALLY
+
+# Optional v5.3 authored voice/habits/persona. Independent generation needs persona.identity.
+# EXPRESSION_PROFILES_FILE=/ABS/PRIVATE/expression_profiles.json
+
+# Reviewed dialogue inherits classifier URL/model/key; optional independent overrides:
+# DIALOGUE_ENDPOINT=https://YOUR-CLOUD-PROVIDER/chat/completions
+# DIALOGUE_MODEL=YOUR_MODEL
+# DIALOGUE_KEY=SET_LOCALLY
+DIALOGUE_MAX_TOKENS=8192
+DIALOGUE_TIMEOUT_SECONDS=120
+# Optional independent options instead of inheriting classifier options:
+# DIALOGUE_REQUEST_OPTIONS_JSON={"thinking":{"type":"disabled"}}
+
+# Optional read-only OB context from the local bridge. Independent private token.
+# OB_BRIDGE_URL=http://127.0.0.1:5020
+# OB_BRIDGE_TOKEN=SET_LOCALLY

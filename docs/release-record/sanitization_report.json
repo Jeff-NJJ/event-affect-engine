@@ -1,0 +1,20 @@
+{
+  "privacy_scan_passed": true,
+  "checked_files_including_nested_toolpkg": 140,
+  "removed_categories": [
+    "real server and local user paths",
+    "personal operator and instance identifiers",
+    "private workflow templates",
+    "raw deployment units and forensic captures",
+    "original private-facing integration drafts"
+  ],
+  "credentials_included": false,
+  "original_deployment_modified": false,
+  "local_regression": {
+    "passed": true,
+    "python_tests": 274,
+    "skipped": 0,
+    "javascript_checks": "passed"
+  },
+  "public_upstream_license_and_paper_attribution_retained": true
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Operit",
+  "repository": "https://github.com/AAswordman/Operit",
+  "reference_tag": "v1.12.2",
+  "commit": "dbf71916fae9750cfdc9f9a774f5a0fee56633fb",
+  "original_file": "app/src/main/assets/packages/daily_life.js",
+  "original_sha256": "d4572145cfe890ed0b9b8d74395cd6891bfe6e060e7b4f6440797c77d99cbaa4",
+  "modified_file": "daily_life.guarded.js",
+  "modified_sha256": "81d48216585d45c2fa6eb2898502b44dfbab27785cf8a31ccca33f09d12143be",
+  "license_file": "LICENSE.upstream",
+  "change": "Isolated shell guard before chat wake; bridge uses hiddenExec stdin and validates server receipt identities",
+  "installed_binary_match_verified": false,
+  "workflow_json": {
+    "count": 0,
+    "purpose": "Private historical workflow templates excluded from sharing edition"
+  }
+}
